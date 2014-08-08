@@ -88,4 +88,50 @@ node default {
     ensure => link,
     target => $boxen::config::repodir
   }
+  
+  include alfred
+  include autojump
+  include chrome::dev
+  include chrome::canary
+  include daisy_disk
+  include dropbox
+  include firefox
+  include github_for_mac
+  include gitx::dev
+  include googledrive
+  include imagemagick
+  include iterm2::dev
+  include java
+  include macvim
+  include mysql
+  include nginx
+  include postgresapp
+  include python
+  include rubymine
+  include skype
+  include sublime_text_3
+  include sublime_text_3::package_control
+  include vagrant
+  include virtualbox
+
+  # osx configuration
+  # https://github.com/boxen/puppet-osx
+  include osx::disable_app_quarantine
+  include osx::dock::autohide
+  include osx::global::disable_key_press_and_hold
+  include osx::global::enable_keyboard_control_access
+  include osx::global::expand_print_dialog
+  include osx::global::expand_save_dialog
+  include osx::global::key_repeat_rate
+  include osx::no_network_dsstores
+
+  class { 'osx::global::key_repeat_delay':
+    delay => 0
+  }
+
+  class { 'osx::dock::icon_size':
+    size => 36
+  }
+
+  include projects::all
 }

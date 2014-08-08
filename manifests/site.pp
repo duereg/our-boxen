@@ -107,6 +107,7 @@ node default {
   include nginx
   include postgresapp
   include python
+  include redis
   include rubymine
   include skype
   include sublime_text_3

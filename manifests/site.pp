@@ -103,6 +103,7 @@ node default {
   include iterm2::dev
   include java
   include macvim
+  include mongodb
   include mysql
   include nginx
   include postgresapp

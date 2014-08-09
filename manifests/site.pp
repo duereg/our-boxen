@@ -105,52 +105,22 @@ node default {
   include nginx
   include phantomjs
   include postgresapp
-  include postgresql
+  # include postgresql
   include python
   include onepassword
-  include osx
+  # include osx
   include redis
   include skype
   include solr
   include sublime_text
-  include sublime_text::package_control
+  # include sublime_text::package_control
   include vagrant
   include virtualbox
   include vlc
   include zsh
 
-  # install any arbitrary nodejs version
-  nodejs::version { 'v0.10.29’: }
-
-  # set the global nodejs version
-  class { 'nodejs::global': version => 'v0.10.29’ }
-
-  # install some npm modules
-  nodejs::module { 'bower':
-    node_version => 'v0.10.29’
-  }
-
   sublime_text::package { 'Emmet':
     source => 'sergeche/emmet-sublime'
-  }
-
-  # osx configuration
-  # https://github.com/boxen/puppet-osx
-  include osx::disable_app_quarantine
-  include osx::dock::autohide
-  include osx::global::disable_key_press_and_hold
-  include osx::global::enable_keyboard_control_access
-  include osx::global::expand_print_dialog
-  include osx::global::expand_save_dialog
-  include osx::global::key_repeat_rate
-  include osx::no_network_dsstores
-
-  class { 'osx::global::key_repeat_delay':
-    delay => 0
-  }
-
-  class { 'osx::dock::icon_size':
-    size => 36
   }
 
   include projects::all

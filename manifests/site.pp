@@ -58,11 +58,6 @@ node default {
   include hub
   include nginx
 
-  # fail if FDE is not enabled
-  if $::root_encrypted == 'no' {
-    fail('Please enable full disk encryption and try again')
-  }
-
   # node versions
   include nodejs::v0_6
   include nodejs::v0_8
@@ -88,33 +83,55 @@ node default {
     ensure => link,
     target => $boxen::config::repodir
   }
-  
-  include alfred
-  include autojump
+
+  include atom
   include chrome::dev
   include chrome::canary
-  include daisy_disk
   include dropbox
   include firefox
+  include foreman
+  include go
+  include gcc
   include github_for_mac
   include gitx::dev
   include googledrive
+  include heroku
   include imagemagick
   include iterm2::dev
   include java
   include macvim
   include mongodb
   include mysql
-  include nginx
+  include phantomjs
   include postgresapp
+  include postgresql
   include python
+  include onepassword
+  include osx
   include redis
-  include rubymine
   include skype
-  include sublime_text_3
-  include sublime_text_3::package_control
+  include solr
+  include sublime_text
+  include sublime_text::package_control
   include vagrant
   include virtualbox
+  include vlc
+  include zsh
+
+  # install any arbitrary nodejs version
+  nodejs::version { 'v0.10.29’: }
+
+  # set the global nodejs version
+  class { 'nodejs::global': version => 'v0.10.29’ }
+
+  # install some npm modules
+  nodejs::module { 'bower':
+    node_version => 'v0.10.29’
+  }
+
+  sublime_text::package { 'Emmet':
+    source => 'sergeche/emmet-sublime'
+  }
 
   # osx configuration
   # https://github.com/boxen/puppet-osx

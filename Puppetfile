@@ -60,33 +60,38 @@ github "xquartz",     "1.1.1"
 # Optional/custom modules. There are tons available at
 # https://github.com/boxen.
 
-github "adium", "1.5.10"
+github “atom”, “1.0.0”
 github "chrome", "1.1.2"
-github "dropbox", "1.2.0"
-github "elasticsearch", "2.1.0"
-github "firefox", "1.1.5"
-github "flux", "1.0.0"
-github "github_for_mac", "1.0.1"
+github "dropbox", “1.3.0”
+github "elasticsearch", “2.4.0”
+github "firefox", “1.2.1”
+github “foreman”, “1.2.0”
+github “gcc”, “2.1.1”
+github "github_for_mac", “1.0.2”
 github "gitx", "1.2.0"
+github “go”, “2.1.0”
 github "googledrive", "1.0.2"
 github "handbrake", "1.0.1"
 github "heroku", "2.1.1"
-github "hipchat", "1.1.0"
-github "imagemagick", "1.2.1"
-github "iterm2", "1.0.5"
-github "java", "1.1.2"
+github "hipchat", “1.1.3”
+github "imagemagick", “1.3.0”
+github "iterm2", “1.1.2”
+github "java", “1.6.0”
 github "macvim", "1.0.0"
-github "memcached", "1.4.0"
-github "mongodb", "1.2.0"
-github "mysql", "1.2.0"
-github "osx", "2.2.0"
-github "picasa", "1.0.0"
+github "memcached", “2.0.0”
+github "mongodb", “1.3.2”
+github "mysql", “1.2.1”
+github “node”, “3.8.1”
+github “onepassword”, “1.1.2”
+github "osx", “2.7.0”
 github "postgresapp", "1.0.0"
+github “postgresql”, “3.0.0”
 github "python", "1.3.0"
-github "rubymine", "1.1.0"
-github "skype", "1.0.7"
+github "skype", “1.0.8”
 github "solr", "1.0.4"
-github "sublime_text_3", "1.0.1", :repo => "jozefizso/puppet-sublime_text_3"
-github "vagrant", "3.0.0"
-github "virtualbox", "1.0.9"
-github "vlc", "1.0.5"
+github "sublime_text", "1.0.1"
+github "vagrant", “3.1.1”
+github "virtualbox", “1.0.13”
+github "vlc", “1.1.0”
+github “zsh”, “1.0.0”
+

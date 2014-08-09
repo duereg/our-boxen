@@ -102,6 +102,7 @@ node default {
   include macvim
   include mongodb
   include mysql
+  include nginx
   include phantomjs
   include postgresapp
   include postgresql

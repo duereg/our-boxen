@@ -92,7 +92,7 @@ node default {
   include foreman
   include go
   include gcc
-  include github_for_mac
+  # include github_for_mac
   include gitx::dev
   include googledrive
   include heroku
@@ -105,7 +105,7 @@ node default {
   include mysql
   include nginx
   include phantomjs
-  include postgresapp
+  # include postgresapp
   # include postgresql
   include python
   include onepassword
@@ -118,7 +118,7 @@ node default {
   include vagrant
   include virtualbox
   include vlc
-  include zsh
+  # include zsh
 
   sublime_text::package { 'Emmet':
     source => 'sergeche/emmet-sublime'

@@ -96,6 +96,7 @@ node default {
   include gitx::dev
   include googledrive
   include heroku
+  include hipchat
   include imagemagick
   include iterm2::dev
   include java
